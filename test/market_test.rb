@@ -56,7 +56,7 @@ class MarketTest < Minitest::Test
     market.add_vendor(vendor2)
     market.add_vendor(vendor3)
 
-    assert_equal ["Rocky Mountain Fresh", "Ba-Nom-a-Nom", "Palasade Peach Shack"], market.vendor_names
+    assert_equal ["Rocky Mountain Fresh", "Ba-Nom-a-Nom", "Palisade Peach Shack"], market.vendor_names
   end
 
 end
