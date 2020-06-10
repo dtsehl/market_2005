@@ -19,4 +19,15 @@ class Market
     vendors.find_all { |vendor| vendor.inventory.include?(item) }
   end
 
+  def total_inventory
+    final_hash = {}
+
+    vendors.reduce(0) do |sum, vendor|
+      vendor.inventory.reduce(0) do |acc, item|
+        final_hash[item.first] = {quantity: sum + item.last, vendors: [vendors_that_sell(item.first)].flatten}
+      end
+    end
+
+  end
+
 end
