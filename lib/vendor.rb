@@ -20,4 +20,11 @@ class Vendor
     end
   end
 
+  def potential_revenue
+    inventory.reduce(0.0) do |accum, item|
+      accum = (item.first.price.delete("$").to_f * item.last) + accum
+      accum
+    end
+  end
+
 end
