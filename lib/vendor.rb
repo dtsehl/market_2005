@@ -7,4 +7,8 @@ class Vendor
     @inventory = {}
   end
 
+  def check_stock(item)
+    return 0 if !inventory.include?(item)
+  end
+
 end
