@@ -27,7 +27,7 @@ class Market
         final_hash[item.first] = {quantity: sum + item.last, vendors: [vendors_that_sell(item.first)].flatten}
       end
     end
-
+# Had trouble with getting the total quantity for the item, I believe the rest was OK.
   end
 
 end
